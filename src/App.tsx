@@ -1,7 +1,13 @@
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
+import { IonApp, IonLabel, IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Home from './pages/Home';
+import  Register from './pages/register'
+import Login from './pages/login';
+import AppTabs from './AppTabs';
+import NotFound from './pages/notFound';
+import Menu from './components/menu/Menu';
+import  AuthContextProvider from './context/AuthContext';
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -26,17 +32,30 @@ setupIonicReact();
 
 const App: React.FC = () => (
   <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/home">
-          <Home />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/home" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
+    <AuthContextProvider>
+      <IonReactRouter>
+        <IonRouterOutlet >
+          <Route exact path="/account/register">
+              <Register />
+          </Route>
+          <Route exact path="/account/login">
+              <Login />
+          </Route>
+          <Route path="/my-recipe">
+            <Menu />
+            <AppTabs/>
+          </Route>
+          <Route exact path="/">
+              <Redirect to ='/account/login'/>
+          </Route>
+          <Route>
+            <NotFound />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </AuthContextProvider>
   </IonApp>
 );
+
 
 export default App;
