@@ -1,4 +1,16 @@
-import {IonPage, IonContent,IonIcon, IonList,IonItem,IonLabel,IonInput,IonButton,IonRouterLink, IonLoading, IonAlert} from "@ionic/react"
+import {
+    IonPage, 
+    IonContent,
+    IonIcon, 
+    IonList,
+    IonItem,
+    IonLabel,
+    IonInput,
+    IonButton,
+    IonRouterLink, 
+    IonLoading, 
+    IonAlert,
+} from "@ionic/react"
 import Header from "../components/header/Header"
 import {logIn} from "ionicons/icons"
 import './styles/login.css'
@@ -68,7 +80,7 @@ const Login = () => {
                 }
             ]}
             />
-            <Header defaultHref='register' headerTitle="صفحة تسجيل الدخول"/>
+            <Header defaultHref='register'  headerTitle="صفحة تسجيل الدخول"/>
             <IonContent>
                 <IonIcon className='icon' icon={logIn} />
                 <IonList>

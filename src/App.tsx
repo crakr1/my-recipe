@@ -46,7 +46,7 @@ const App: React.FC = () => (
             <AppTabs/>
           </Route>
           <Route exact path="/">
-              <Redirect to ='/account/login'/>
+              <Redirect to ='/my-recipe/all-posts'/>
           </Route>
           <Route>
             <NotFound />

@@ -14,6 +14,8 @@
 
 .post-like {
     margin-right: 5px;
+    font-size: 16px;
+    margin-top: 4px;
 }
 
 .post-time {
@@ -27,6 +29,10 @@
     margin-right: 5px;
 }
 
+.post-img {
+    width: 100%;
+}
+
 .comment-avatar {
     width: 50px;
     height: 50px;
@@ -35,7 +41,6 @@
 
 .comment-card {
     width: 80%;
-    background-color: #fff;
     margin-right: 5px;
     margin-bottom: 0;
     padding-right: 10px;
@@ -43,11 +48,28 @@
 
 .comment-text {
     margin-right: 10px;
+    color: #d6d6d6;
     margin-top: 0;
 }
 
+.comment-item {
+    bottom: -20px;
+    width: 100%;
+
+}
+
+.comment-text-area {
+    background-color: #222428;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 10px 10px 0 0;
+}
+
 .send-icon {
-    margin-top: 25px;
+    margin-top: 5px;
     transform: rotate(180deg);
     background-color: var(--ion-color-primary-tint);
     padding: 10px;

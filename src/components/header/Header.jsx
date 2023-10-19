@@ -9,7 +9,7 @@ const Header = (props) => {
                     <IonMenuButton/>
                 </IonButtons>
                 <IonButtons slot= 'start'>
-                    <IonBackButton defaultHref={props.defaultHref}/>
+                    <IonBackButton defaultHref={props.defaultHref} disabled={props.disabledBackButton}/>
                 </IonButtons>
             </IonToolbar>
         </IonHeader>

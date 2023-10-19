@@ -1,5 +1,5 @@
 div.RichEditor-root {
-    background-color: #F9FAFF;
+    background-color: #222428;
     width:90%;
     margin:auto;
     box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.5);
@@ -10,8 +10,8 @@ div.RichEditor-root {
     font-family: 'calibri', sans-serif;
 }
 
-ion-content{
-    --ion-background-color:#F9FAFF;
+.DraftEditor-root {
+  width: 100%;
 }
 
 .icon-images{
@@ -21,6 +21,12 @@ ion-content{
 
 div.icon-container {
     margin: auto;
+}
+
+.label-style {
+  background-color: #999;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
 
@@ -37,6 +43,13 @@ div.icon-container {
     cursor: text;
     font-size: 16px;
     margin-top: 10px;
+  }
+
+  .get-photo{
+    background-color: #20c67b;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 20px 0 ;
   }
   
   .RichEditor-editor .public-DraftEditorPlaceholder-root,
@@ -60,8 +73,9 @@ div.icon-container {
   .RichEditor-controls {
     font-family: 'Helvetica', sans-serif;
     font-size: 14px;
-    margin-bottom: 5px;
     user-select: none;
+    position: relative;
+    bottom: 10px;
   }
   
   .RichEditor-styleButton {
