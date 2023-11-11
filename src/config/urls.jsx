@@ -1,4 +1,4 @@
-export const API_URL = "http://192.168.8.104:4000"
+export const API_URL = "https://api.render.com/deploy/srv-cl2191op2gis73ft4ksg?key=3GEoAADNShM"
 
 export const REGISTER_URL ="account/register"
 export const LOGIN_URL ="account/login"
