@@ -1,4 +1,4 @@
-export const API_URL = "https://my-recipe-server.onrender.com/api"
+export const API_URL = "https://my-recipe-server.onrender.com/"
 
 export const REGISTER_URL ="account/register"
 export const LOGIN_URL ="account/login"
