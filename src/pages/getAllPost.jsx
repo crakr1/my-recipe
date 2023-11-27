@@ -53,7 +53,7 @@ const GetAllPost = () => {
                 setShowLoading(false)
             })
         } catch(e) {
-            console.log(r.response)
+            console.log(e.response)
             setShowLoading(false)
         }
     }

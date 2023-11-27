@@ -68,32 +68,33 @@ const CreatePost = () => {
         }
     }
 
-    const onSubmit= async () => {
+    const onSubmit = async () => {
         const postData = new FormData()
-        try{
-            postData.append("title" , title)
-            postData.append("contents" , contents)
-            postData.append("steps" , steps)
-            for(let i = 0; i < photos.length; i++) {
-                const response = await fetch(photos[i])
-                const blob = await response.blob()
-                postData.append('postImg', blob)
+        try {
+          postData.append("title", title)
+          postData.append("contents", contents)
+          postData.append("steps", steps)
+          for (let i = 0; i < photos.length; i++) {
+            const response = await fetch(photos[i]);
+            const blob = await response.blob();
+            postData.append("postImg", blob)
+          }
+      
+          await axios.post(CREATE_POST, postData, {
+            headers: {
+              Authorization: jwt
             }
-            await axios.post(CREATE_POST, postData, {
-                headers: {
-                    Authorization : jwt
-                }
-            }).then(res => {
-                console.log(res)
-                setPhotos([])
-                setTitle("")
-                setContents("")
-                setSteps("")
-            })
-        } catch(e) {
-            console.log(e.response)
+          }).then(res => {
+            console.log(res)
+            setPhotos([])
+            setTitle("")
+            setContents("")
+            setSteps("")
+          })
+        } catch (e) {
+          console.log(e)
         }
-    }
+      }
 
     const Validator = () => {
         if(photos.length > 0) {

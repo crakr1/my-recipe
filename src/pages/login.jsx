@@ -52,7 +52,8 @@ const Login = () => {
                 setShowLoading(false)
             })
         } catch(e) {
-            if (e.response.status === 401 ){
+            console.log(e)
+            if (e.response.status === 404 ){
                 setShowAlert(true)
                 setShowLoading(false)
             }else {

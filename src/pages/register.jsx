@@ -43,7 +43,7 @@ const Register = () => {
                 setShowLoading(false)
             })
         } catch(e) {
-          if(e.response.status === 400){
+          if(e.response.status === 404){
             setShowLoading(false)
             setShowErrorAlert(true)
           }else {

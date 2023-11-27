@@ -26,6 +26,7 @@
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.5.1",
     "draft-js": "^0.11.7",
+    "firebase": "^10.7.0",
     "formik": "^2.4.5",
     "ionicons": "^7.0.0",
     "moment": "^2.29.4",
