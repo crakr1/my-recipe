@@ -64,7 +64,7 @@ const Menu =() => {
     }
 
     return (
-    <IonMenu side="start" contentId="menu">
+    <IonMenu side="start" contentId="content1">
         {showLoading 
         ?
         <IonLoading isOpen={showLoading}/>
