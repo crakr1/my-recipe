@@ -1,4 +1,4 @@
-export const API_URL = "https://192.168.8.104:5432"
+export const API_URL = "https://my-recipe-bgeu.onrender.com"
 
 export const REGISTER_URL ="account/register"
 export const LOGIN_URL ="account/login"
